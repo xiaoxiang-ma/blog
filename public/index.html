@@ -1,11 +1,1231 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>(▀̿Ĺ̯▀̿ ̿) | Ma blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/blog/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">(▀̿Ĺ̯▀̿ ̿)</h1><a id="logo" href="/blog/.">(▀̿Ĺ̯▀̿ ̿)</a><p class="description">Ma blog</p></div><div id="nav-menu"><a class="current" href="/blog/."><i class="fa fa-home"> 首页</i></a><a href="/blog/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/blog/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/blog/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/blog/2020/06/17/workschedule/">Work &amp; Life &amp; Summer</a></h1><div class="post-meta">2020-06-17</div><div class="post-content"><p>Work:</p>
-<ul>
-<li>9am - 5pm: Work time. No social media, gaming, or videos</li>
-<li>YS main, Marhub alt, free time on loan prediction project/personal projects.</li></div><p class="readmore"><a href="/blog/2020/06/17/workschedule/">阅读全文</a></p></div><div class="post"><h1 class="post-title"><a href="/blog/2020/06/13/reinforcement/">Reinforcement Learning Notes</a></h1><div class="post-meta">2020-06-13</div><div class="post-content"><!-- ## Reinforcement Learning Notes -->
+<!DOCTYPE html>
 
-<p>Designs an agent that tries to maximize “reward” by trial and error.<br>Not supervised, but not unsupervised either.</p></div><p class="readmore"><a href="/blog/2020/06/13/reinforcement/">阅读全文</a></p></div><div class="post"><h1 class="post-title"><a href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/">杨绛语录</a></h1><div class="post-meta">2020-05-27</div><div class="post-content"><blockquote>
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="(▀̿Ĺ̯▀̿ ̿)">
+<meta property="og:url" content="http://xiaoxiang-ma.github.io/blog/index.html">
+<meta property="og:site_name" content="(▀̿Ĺ̯▀̿ ̿)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="mx^2">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiaoxiang-ma.github.io/blog/"/>
+
+
+
+
+
+  <title>(▀̿Ĺ̯▀̿ ̿)</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">(▀̿Ĺ̯▀̿ ̿)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Ma blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/blog/2020/06/18/markovdecisionprocess/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mx^2">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="(▀̿Ĺ̯▀̿ ̿)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2020/06/18/markovdecisionprocess/" itemprop="url">Finite Markov Decision Processes</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-18T15:00:13-04:00">
+                2020-06-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Data-Science/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Science</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>MDPs are a classical formalization of sequential decision making, where actions inﬂuence not just immediate rewards, but also subsequent situations, or states, and through those future rewards. </p>
+<p>Thus MDPs involve delayed reward and the need to tradeoff immediate and delayed reward. Whereas in bandit problems we estimated the value q ⇤ (a) of each action a, in MDPs we estimate the value q ⇤ (s, a) of each action a in each state s, or we estimate the value v ⇤ (s) of each state given optimal action selections. </p>
+<img src="/blog/2020/06/18/markovdecisionprocess/mdp0.png" class="" title="cycle">
+
+<p>For a problem, as long as you can identify States, Actions, and Rewards. It can be framed using RL.</p>
+<h2 id="dynamics-of-MDP"><a href="#dynamics-of-MDP" class="headerlink" title="dynamics of MDP"></a><em>dynamics</em> of MDP</h2><img src="/blog/2020/06/18/markovdecisionprocess/mdp1.png" class="" title="dynamics of the MDP">
+
+<h2 id="Recycling-Robot-example"><a href="#Recycling-Robot-example" class="headerlink" title="Recycling Robot example"></a>Recycling Robot example</h2><img src="/blog/2020/06/18/markovdecisionprocess/mdp2.png" class="" title="MDP graph">
+
+<h2 id="Rewards-amp-Goals"><a href="#Rewards-amp-Goals" class="headerlink" title="Rewards &amp; Goals"></a>Rewards &amp; Goals</h2><p>The reward signal is your way of communicating to the robot <strong><em>what</em></strong> you want it to achieve, not <strong><em>how</em></strong> you want it achieved</p>
+<p><strong>Episodic</strong> tasks: Tasks that have a set terminal state. e.g. a chess game.</p>
+<p><strong>Continuing</strong> tasks: Tasks that can continue forever. e.g. balance a pole.<br><strong>Discounting</strong>: Decrease future rewards by discounting factor. Infinite sum of rewards remain bounded.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/blog/2020/06/13/reinforcement/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mx^2">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="(▀̿Ĺ̯▀̿ ̿)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2020/06/13/reinforcement/" itemprop="url">RL - Bandit problem</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-13T22:06:45-04:00">
+                2020-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Data-Science/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Science</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- ## Reinforcement Learning Notes -->
+
+<p>Designs an agent that tries to maximize “reward” by trial and error.<br>Not supervised, but not unsupervised either.</p>
+<p><a href="RL.pdf">Textbook</a></p>
+<h2 id="The-k-armed-Bandit-Problem"><a href="#The-k-armed-Bandit-Problem" class="headerlink" title="The k-armed Bandit Problem"></a>The k-armed Bandit Problem</h2><p>Faced repeatedly with a choice among k different options. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. The objective is to maximize the expected total reward over some time period, for example, over 1000 action selections, or time steps.</p>
+<!-- ![True value of action](1equation.png) -->
+<img src="/blog/2020/06/13/reinforcement/1equation.png" class="" title="True value of action">
+
+<p>Value of an action is the expected value of reward given that action is selected.</p>
+<ul>
+<li>q*(a): TRUE Value of an action (Note known)</li>
+<li>Qt(a): estimated value of action a at time step t, We would like Q t (a) to be close to q*(a).</li>
+<li>At: Action selected on time step t</li>
+<li>Rt: Corresponding Reward on time step t</li>
+</ul>
+<p>Goal is to maximize argmax of q*(a)</p>
+<blockquote>
+<p>Each of the k actions has an expected or mean reward given that that action is selected; let us call this the value of that action. We denote the action selected on time step t as A t , and the corresponding reward as R t . The value then of an arbitrary action a, denoted q ⇤ (a), is the expected reward given that a is selected</p>
+</blockquote>
+<h2 id="Action-Value-amp-increment-estimation"><a href="#Action-Value-amp-increment-estimation" class="headerlink" title="Action-Value &amp; increment estimation"></a>Action-Value &amp; increment estimation</h2><p>Sample average method: Take the average of action-values so far.</p>
+<!-- ![Sample avg (predicted) action value](2actionvalue.png) -->
+<img src="/blog/2020/06/13/reinforcement/2actionvalue.png" class="" title="Sample avg (predicted) action value">
+
+<!-- ![Action value](3.png) -->
+
+<p>Action Selection:</p>
+<ul>
+<li>Exploit / Greedy: argmax Qt(a) (choose the current largest estimate action / most reward right now)</li>
+<li>Explore: choose other than the largest estimate randomly.</li>
+</ul>
+<p><mark>Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the long run.</mark></p>
+<!-- ![Increment (R = reward)](4.png) -->
+<img src="/blog/2020/06/13/reinforcement/4.png" class="" title="Increment (R &#x3D; reward)">
+
+<p>NewEstimate = OldEstimate + StepSize (Target - OldEstimate)</p>
+<p><strong>Nonstationary Problem</strong><br>Performance changes with time. (e.g. a medicine more effective in winter)</p>
+<!-- ![Constant step size](5.png) -->
+<img src="/blog/2020/06/13/reinforcement/5.png" class="" title="Constant step size">
+
+<ul>
+<li>alpha is constant, more recent rewards affect more than older rewards.</li>
+<li>weight decays exponentially according to the exponent on 1- alpha.</li>
+</ul>
+<h2 id="Epsilon-Greedy-amp-optimistic-initial-value"><a href="#Epsilon-Greedy-amp-optimistic-initial-value" class="headerlink" title="Epsilon Greedy &amp; optimistic initial value"></a>Epsilon Greedy &amp; optimistic initial value</h2><p>Epsilon = prob of choosing to explore.<br>The smaller, the longer it takes for curve to plateu.</p>
+<!-- ![Epsilon](7.png) -->
+<img src="/blog/2020/06/13/reinforcement/7.png" class="" title="Epsilon">
+
+<!-- ![Optimistic int val](6.png) -->
+<img src="/blog/2020/06/13/reinforcement/6.png" class="" title="Optimistic int val">
+
+<ul>
+<li><strong>Worse at first due to more exploration, exploration decreases with time (not goot for nonstationary problems).</strong></li>
+<li>The system does a fair amount of exploration even if greedy actions are selected all the time.</li>
+</ul>
+<h2 id="Upper-Conﬁdence-Bound-Action-Selection"><a href="#Upper-Conﬁdence-Bound-Action-Selection" class="headerlink" title="Upper-Conﬁdence-Bound Action Selection"></a>Upper-Conﬁdence-Bound Action Selection</h2><p>Action selection method that chooses the most “unexplored” / “uncertain” actions when not choosing to exploit.</p>
+<!-- ![UCB](8.png) -->
+<img src="/blog/2020/06/13/reinforcement/8.png" class="" title="UCB">
+
+<blockquote>
+<p>N t(a) denotes the number of times that action a has been selected prior to time t (the denominator in (2.1)), and the number c &gt; 0 controls the degree of exploration. If N t (a) = 0, then a is considered to be a maximizing action.</p>
+</blockquote>
+<blockquote>
+<p>The idea of this upper conﬁdence bound (UCB) action selection is that the square-root term is a measure of the uncertainty or variance in the estimate of a’s value. The quantity being max’ed over is thus a sort of upper bound on the possible true value of action a, with c determining the conﬁdence level. <strong><em>Each time a is selected the uncertainty is presumably reduced: N t (a) increments, and, as it appears in the denominator, the uncertainty term decreases.</em></strong> On the other hand, each time an action other than a is selected, t increases but N t (a) does not; because t appears in the numerator, the uncertainty estimate increases. The use of the natural logarithm means that the increases get smaller over time, but are unbounded; all actions will eventually be selected, but actions with lower value estimates, or that have already been selected frequently, will be selected with decreasing frequency over time.</p>
+</blockquote>
+<p><a href="summary.mp4">Week 1 Summary</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mx^2">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="(▀̿Ĺ̯▀̿ ̿)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/" itemprop="url">杨绛语录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-27T20:26:07-04:00">
+                2020-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/%E6%91%98%E5%BD%95/" itemprop="url" rel="index">
+                    <span itemprop="name">摘录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
 <ol>
 <li>你的问题主要在于读书不多而想得太多。</li>
 <li>如要锻炼一个能做大事的人，必定要叫他吃苦受累，百不称心，才能养成坚忍的性格。一个人经过不同程度的锻炼，就获得不同程度的修养，不同程度的效益。好比香料，捣得愈碎，磨得愈细，香得愈浓烈。</li>
-<li>我们曾如此渴望命运的波澜，到最后才发现：人生最曼妙的风景，竟是内心的淡定与从容……我们曾如此期盼外界的认可，到最后才知道：世界是自己的，与他人毫无关系！</li></div><p class="readmore"><a href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/">阅读全文</a></p></div><div class="post"><h1 class="post-title"><a href="/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/">大学年三</a></h1><div class="post-meta">2020-05-23</div><div class="post-content"><p>五月给伊萨卡带来了阳光与微风，让夏日的美好充斥鼻尖。buttermilk公园的原始森林穿插着鸟叫和微弱的水声，恬静得似乎闭目养神就能和自然融为一体。</p>
-<p>大学的第三年也随着五月的到来缓缓结束了。这一年里，我感到可以更有效的去和自己沟通，并更精准的的理解自己行为背后的思想和心情。这让我能更好的管理时间，计划未来，并预判自己的行为。同时，我也了解到了太多未知的领域，学习和消化新知识的速度远远跟不上发现未知的速度。就好比一只蜗牛发现了新大陆，随他激动也好，信心满满也好，他的移动速度完全跟不上他想去征服这块大陆的决心。</p></div><p class="readmore"><a href="/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/">阅读全文</a></p></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/blog/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a> <a href="/blog/tags/%E5%BF%83%E6%83%85/" style="font-size: 15px;">心情</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2020/06/17/workschedule/">Work & Life & Summer</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2020/06/13/reinforcement/">Reinforcement Learning Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/">杨绛语录</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/">大学年三</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/blog/." rel="nofollow">(▀̿Ĺ̯▀̿ ̿).</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/blog/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/blog/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/blog/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<li>我们曾如此渴望命运的波澜，到最后才发现：人生最曼妙的风景，竟是内心的淡定与从容……我们曾如此期盼外界的认可，到最后才知道：世界是自己的，与他人毫无关系！</li>
+<li>有些人之所以不断成长，就绝对是有一种坚持下去的力量。好读书，肯下功夫，不仅读，还做笔记。人要成长，必有原因，背后的努力与积累一定数倍于普通人。所以，关键还在于自己。</li>
+<li>少年贪玩，青年迷恋爱情，壮年汲汲于成名成家，暮年自安于自欺欺人。人寿几何，顽铁能炼成的精金，能有多少？但不同程度的锻炼，必有不同程度的成绩；不同程度的纵欲放肆，必积下不同程度的顽劣。</li>
+<li>在这物欲横流的人世间，人生一世实在是够苦。你存心做一个与世无争的老实人吧，人家就利用你欺侮你。你稍有才德品貌，人家就嫉妒你排挤你。你大度退让，人家就侵犯你损害你。你要不与人争，就得与世无求，同时还要维持实力准备斗争。你要和别人和平共处，就先得和他们周旋，还得准备随时吃亏。</li>
+<li>惟有身处卑微的人，最有机缘看到世态人情的真相。一个人不想攀高就不怕下跌，也不用倾轧排挤，可以保其天真，成其自然，潜心一志完成自己能做的事。</li>
+<li>上苍不会让所有幸福集中到某个人身上，得到爱情未必拥有金钱；拥有金钱未必得到快乐；得到快乐未必拥有健康；拥有健康未必一切都会如愿以偿。保持知足常乐的心态才是淬炼心智、净化心灵的最佳途径。一切快乐的享受都属于精神，这种快乐把忍受变为享受，是精神对于物质的胜利，这便是人生哲学。</li>
+<li>世间好物不坚牢，彩云易散琉璃脆。</li>
+<li>我是一位老人，净说些老话。对于时代，我是落伍者，没有什么良言贡献给现代婚姻。只是在物质至上的时代潮流下，想提醒年轻的朋友，男女结合最最重要的是感情，双方互相理解的程度。理解深才能互相欣赏、吸引、支持和鼓励，两情相悦。门当户对及其他，并不重要。</li>
+<li>月盈则亏，水满则溢，爱情到这里就可以了，我不要它溢出来。</li>
+<li>我和谁都不争，和谁争我都不屑。简朴的生活、高贵的灵魂是人生的至高境界。</li>
+</ol>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mx^2">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="(▀̿Ĺ̯▀̿ ̿)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/" itemprop="url">hello world</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-23T18:05:56-04:00">
+                2020-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>花了两天搭了个hexo博客，用着顺手简洁，以后就随便写点什么。</p>
+<p>五月给伊萨卡带来了阳光与微风，夏日的美好充斥鼻尖。buttermilk公园的原始森林穿插着鸟叫和水声，似乎闭目养神就能和自然融为一体。</p>
+<p>回看大三，感到可以更有效的去和自己沟通，并更精准的理解自己的思想和心情。这让我能更好的管理时间，计划未来，并预判自己。同时，我也了解到了太多未知的领域，学习和消化新知识的速度远远跟不上发现未知的速度。就好比一只蜗牛发现了新大陆，随他激动也好，信心满满也好，他的移动速度完全匹不上他想去征服这块大陆的野心。</p>
+<p>数据科学的求知路尽管坎坷，但非常充实。虽然我认为自己对知识的消化的算是较慢的，但这一年的积累也让我的思维方式完全蜕变。凡事都不会一蹴而就，让时间去沉淀和积累吧。</p>
+<p>未来可期，愿自己能在步入社会的同时不忘初心、牢记原则和信仰。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/blog/images/avatar.gif"
+               alt="mx^2" />
+          <p class="site-author-name" itemprop="name">mx^2</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/blog/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/blog/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/blog/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiaoxiang-ma" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mx^2</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
