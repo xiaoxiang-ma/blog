@@ -12,7 +12,8 @@ categories: Data Science
 Designs an agent that tries to maximize "reward" by trial and error.
 Not supervised, but not unsupervised either.
 
-[Textbook](RL.pdf)
+<!-- [Textbook](RL.pdf) -->
+{% asset_link RL.pdf Textbook PDF%}
 
 ## The k-armed Bandit Problem
 
@@ -87,6 +88,7 @@ Action selection method that chooses the most "unexplored" / "uncertain" actions
 
 > The idea of this upper conﬁdence bound (UCB) action selection is that the square-root term is a measure of the uncertainty or variance in the estimate of a’s value. The quantity being max’ed over is thus a sort of upper bound on the possible true value of action a, with c determining the conﬁdence level. ***Each time a is selected the uncertainty is presumably reduced: N t (a) increments, and, as it appears in the denominator, the uncertainty term decreases.*** On the other hand, each time an action other than a is selected, t increases but N t (a) does not; because t appears in the numerator, the uncertainty estimate increases. The use of the natural logarithm means that the increases get smaller over time, but are unbounded; all actions will eventually be selected, but actions with lower value estimates, or that have already been selected frequently, will be selected with decreasing frequency over time.
 
-[Week 1 Summary](summary.mp4)
+<!-- [Week 1 Summary](summary.mp4) -->
+{% asset_link summary.mp4 Video: Week 1 Summary %}
 
 
