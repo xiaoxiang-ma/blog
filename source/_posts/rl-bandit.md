@@ -1,5 +1,5 @@
 ---
-title: RL - Bandit problem
+title: Bandit problem
 date: 2020-06-13 22:06:45
 tags: 
 - 笔记

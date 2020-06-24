@@ -1,5 +1,5 @@
 ---
-title: Finite Markov Decision Processes
+title: Finite Markov Decision Processes & Rewards
 date: 2020-06-18 15:00:13
 tags: 
 - 笔记
@@ -32,3 +32,5 @@ The reward signal is your way of communicating to the robot ***what*** you want 
 **Continuing** tasks: Tasks that can continue forever. e.g. balance a pole.
 **Discounting**: Decrease future rewards by discounting factor. Infinite sum of rewards remain bounded.
 
+{% asset_img G0.png Return denoted as G %}
+{% asset_img G1.png Infinite sum when gamma < 1 and >0 %}
