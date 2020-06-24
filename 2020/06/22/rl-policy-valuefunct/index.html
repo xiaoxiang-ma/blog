@@ -18,22 +18,27 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"xiaoxiang-ma.github.io","root":"/blog/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"xiaoxiang-ma.github.io","root":"/blog/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="PoliciesFormally, a policy is a mapping from states to probabilities of selecting each possible action. If the agent is following policy pi at time t, then pi(a | s) is the probability that At&#x3D; a if S">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rl_policy_valuefunct">
+<meta property="og:title" content="Policies and Value functions">
 <meta property="og:url" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/index.html">
 <meta property="og:site_name" content="(▀̿Ĺ̯▀̿ ̿)">
 <meta property="og:description" content="PoliciesFormally, a policy is a mapping from states to probabilities of selecting each possible action. If the agent is following policy pi at time t, then pi(a | s) is the probability that At&#x3D; a if S">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/statevalue.png">
+<meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/v.png">
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/actionvalue.png">
+<meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/q.png">
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/bellman.png">
+<meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/tree.png">
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/grid.png">
+<meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/computingV1.png">
+<meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/22/rl-policy-valuefunct/computingV2.png">
 <meta property="article:published_time" content="2020-06-22T19:31:56.000Z">
-<meta property="article:modified_time" content="2020-06-23T03:51:23.567Z">
+<meta property="article:modified_time" content="2020-06-24T02:17:50.640Z">
 <meta property="article:author" content="Xiaoxiang Ma">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="RL">
@@ -53,7 +58,7 @@
   };
 </script>
 
-  <title>rl_policy_valuefunct | (▀̿Ĺ̯▀̿ ̿)</title>
+  <title>Policies and Value functions | (▀̿Ĺ̯▀̿ ̿)</title>
   
 
 
@@ -182,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          rl_policy_valuefunct
+          Policies and Value functions
         </h1>
 
         <div class="post-meta">
@@ -191,10 +196,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-22 15:31:56 / Modified: 23:51:23" itemprop="dateCreated datePublished" datetime="2020-06-22T15:31:56-04:00">2020-06-22</time>
+              <time title="Created: 2020-06-22 15:31:56" itemprop="dateCreated datePublished" datetime="2020-06-22T15:31:56-04:00">2020-06-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-23 22:17:50" itemprop="dateModified" datetime="2020-06-23T22:17:50-04:00">2020-06-23</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -229,10 +240,12 @@
 <p>Policy can depend only on the current state, and not other things like time or previous states.</p>
 <h2 id="Value-functions"><a href="#Value-functions" class="headerlink" title="Value functions"></a>Value functions</h2><p><strong>State-value function</strong><br>The expected return when starting in s and following policy pi thereafter.</p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/statevalue.png" class="" title="(G: return)">
+<img src="/blog/2020/06/22/rl-policy-valuefunct/v.png" class="">
 
 
 <p><strong>Action-value function</strong><br>The value of taking action a in state s under a policy pi.</p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/actionvalue.png" class="">
+<img src="/blog/2020/06/22/rl-policy-valuefunct/q.png" class="">
 
 <p>Value functions allow an agent to query the quality of its current situation instead of waiting to observe the long-term outcome. </p>
 <p>Benefits:</p>
@@ -241,12 +254,23 @@
 <li>The return may be random due to stochasticity in both the policy and environment dynamics. </li>
 </ol>
 <p>The value function summarizes all the possible futures by averaging over returns. Ultimately, we care most about <strong><em>learning a good policy</em></strong>. Value function enable us to judge the quality of different policies.</p>
-<h3 id="Bellman-equation-for-v-pi"><a href="#Bellman-equation-for-v-pi" class="headerlink" title="Bellman equation for v pi"></a>Bellman equation for v pi</h3><p>The Bellman equation expresses a relationship between the value of a state and the values of its successor states.</p>
-<p>It averages over all the possibilities, weighting each by its probability of occurring. It states that the value of the start state must equal the (discounted) value of the expected next state, plus the reward expected along the way.</p>
+<h3 id="Bellman-equation-for-v-pi"><a href="#Bellman-equation-for-v-pi" class="headerlink" title="Bellman equation for v pi"></a>Bellman equation for v pi</h3><p>Expresses a relationship between the <strong><em>value of a state</em></strong> and the <strong><em>values of its successor states.</em></strong></p>
+<p>It states that the value of the start state must equal the (discounted) value of the expected next state, plus the reward expected along the way.<br>(Refer to previous definitions of v)</p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/bellman.png" class="" title="Bellman Equation">
 
-<p>Sum of (Action a’s probability under current state s * the sum of (probability of next state s’ and given a is taken under s * the sum of corresponding reward r and discounted value of state s’))</p>
+
+<p>Sum of (Action a’s probability under current state s * the sum of (probability of next state s’ given a is taken under s * the sum of corresponding reward r and discounted value of state s’))</p>
+<img src="/blog/2020/06/22/rl-policy-valuefunct/tree.png" class="" title="Tree">
+
+<blockquote>
+<p>Each open circle represents a state and each solid circle represents a <strong>state–action</strong> pair. Starting from state s, the root node at the top, the agent could take any of some set of actions – three are shown in the diagram—based on its policy pi. From each of these, the environment could respond with one of several next states, s’ (two are shown in the ﬁgure), along with a reward, r, depending on its dynamics given by the function p.</p>
+</blockquote>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/grid.png" class="" title="Example of finite MDP">
+
+
+<h3 id="Using-Bellman-equation-and-computing-v"><a href="#Using-Bellman-equation-and-computing-v" class="headerlink" title="Using Bellman equation and computing v"></a>Using Bellman equation and computing v</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/computingV1.png" class="" title="Simple case: only one future state for each action">
+<img src="/blog/2020/06/22/rl-policy-valuefunct/computingV2.png" class="" title="Now solve linear equations">
+
 
     </div>
 
@@ -266,8 +290,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2020/06/18/rl-mdp/" rel="prev" title="Finite Markov Decision Processes">
-      <i class="fa fa-chevron-left"></i> Finite Markov Decision Processes
+    <a href="/blog/2020/06/18/rl-mdp/" rel="prev" title="Finite Markov Decision Processes & Rewards">
+      <i class="fa fa-chevron-left"></i> Finite Markov Decision Processes & Rewards
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -328,7 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Policies"><span class="nav-number">1.</span> <span class="nav-text">Policies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Value-functions"><span class="nav-number">2.</span> <span class="nav-text">Value functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bellman-equation-for-v-pi"><span class="nav-number">2.1.</span> <span class="nav-text">Bellman equation for v pi</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Policies"><span class="nav-number">1.</span> <span class="nav-text">Policies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Value-functions"><span class="nav-number">2.</span> <span class="nav-text">Value functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bellman-equation-for-v-pi"><span class="nav-number">2.1.</span> <span class="nav-text">Bellman equation for v pi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-Bellman-equation-and-computing-v"><span class="nav-number">2.2.</span> <span class="nav-text">Using Bellman equation and computing v</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
