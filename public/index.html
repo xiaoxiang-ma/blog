@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-23 22:17:50" itemprop="dateModified" datetime="2020-06-23T22:17:50-04:00">2020-06-23</time>
+                <time title="Modified: 2020-06-29 23:34:27" itemprop="dateModified" datetime="2020-06-29T23:34:27-04:00">2020-06-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,42 +211,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Policies"><a href="#Policies" class="headerlink" title="Policies"></a>Policies</h2><p>Formally, a policy is a mapping from states to probabilities of selecting each possible action. If the agent is following policy pi at time t, then pi(a | s) is the probability that At= a if St= s.</p>
+          <h2 id="1-Policies"><a href="#1-Policies" class="headerlink" title="1. Policies"></a>1. Policies</h2><p>Formally, a policy is a mapping from states to probabilities of selecting each possible action. If the agent is following policy $\pi$ at time $t$, then $\pi(a | s)$ is the probability that $A_t=a$ if $S_t=s$.</p>
 <p><strong>Deterministic</strong> policy: A policy that maps each state to a single action.</p>
 <p><strong>Stochastic</strong> policy: A policy where multiple actions may be selected with non-zero probability. The probabilities are non-negative and sum to 1.</p>
-<p>Policy can depend only on the current state, and not other things like time or previous states.</p>
-<h2 id="Value-functions"><a href="#Value-functions" class="headerlink" title="Value functions"></a>Value functions</h2><p><strong>State-value function</strong><br>The expected return when starting in s and following policy pi thereafter.</p>
+<p><strong><em>Policies tell an agent how to behave in their environment.</em></strong></p>
+<p><strong><em>Policy can depend only on the current state, and not other things like time or previous states.</em></strong></p>
+<h2 id="2-Value-functions"><a href="#2-Value-functions" class="headerlink" title="2. Value functions"></a>2. Value functions</h2><p>Value functions estimate future returns under a specific policy.</p>
+<h3 id="State-value-function"><a href="#State-value-function" class="headerlink" title="State-value function"></a><strong>State-value function</strong></h3><p>The expected return when starting in s and following policy $\pi$ thereafter.</p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/statevalue.png" class="" title="(G: return)">
 <img src="/blog/2020/06/22/rl-policy-valuefunct/v.png" class="">
 
 
-<p><strong>Action-value function</strong><br>The value of taking action a in state s under a policy pi.</p>
+<h3 id="Action-value-function"><a href="#Action-value-function" class="headerlink" title="Action-value function"></a><strong>Action-value function</strong></h3><p>The value of taking action a in state s and following policy $\pi$ thereafter.</p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/actionvalue.png" class="">
 <img src="/blog/2020/06/22/rl-policy-valuefunct/q.png" class="">
 
 <p>Value functions allow an agent to query the quality of its current situation instead of waiting to observe the long-term outcome. </p>
 <p>Benefits:</p>
-<ol>
-<li>The return is not immediately available</li>
+<ul>
+<li>The return is not immediately available.</li>
 <li>The return may be random due to stochasticity in both the policy and environment dynamics. </li>
-</ol>
+</ul>
 <p>The value function summarizes all the possible futures by averaging over returns. Ultimately, we care most about <strong><em>learning a good policy</em></strong>. Value function enable us to judge the quality of different policies.</p>
-<h3 id="Bellman-equation-for-v-pi"><a href="#Bellman-equation-for-v-pi" class="headerlink" title="Bellman equation for v pi"></a>Bellman equation for v pi</h3><p>Expresses a relationship between the <strong><em>value of a state</em></strong> and the <strong><em>values of its successor states.</em></strong></p>
-<p>It states that the value of the start state must equal the (discounted) value of the expected next state, plus the reward expected along the way.<br>(Refer to previous definitions of v)</p>
+<h3 id="Bellman-equation-for-v-pi"><a href="#Bellman-equation-for-v-pi" class="headerlink" title="Bellman equation for $v_\pi$"></a>Bellman equation for $v_\pi$</h3><p>Expresses a relationship between the <strong><em>value of a state</em></strong> and the <strong><em>values of its successor states.</em></strong></p>
+<!-- It states that the value of the start state must equal the (discounted) value of the expected next state, plus the reward expected along the way.
+(Refer to previous definitions of v) -->
+
+<p>The Bellman equation for the state value function gives the value of the current state as a sum over the values of all the successor states, and immediate rewards. </p>
 <img src="/blog/2020/06/22/rl-policy-valuefunct/bellman.png" class="" title="Bellman Equation">
 
 
-<p>Sum of (Action a’s probability under current state s * the sum of (probability of next state s’ given a is taken under s * the sum of corresponding reward r and discounted value of state s’))</p>
-<img src="/blog/2020/06/22/rl-policy-valuefunct/tree.png" class="" title="Tree">
+<p>$\sum$ (Action $a$’s probability under current state $s$ $\times \sum$  (probability of next state <em>s’</em> given $a$ is taken under $s$) $\times$ (corresponding reward $r$ + discounted value of state <em>s’</em> ))</p>
+<img src="/blog/2020/06/22/rl-policy-valuefunct/tree.png" class="" title="Explains 3.14 graphically">
 
-<blockquote>
-<p>Each open circle represents a state and each solid circle represents a <strong>state–action</strong> pair. Starting from state s, the root node at the top, the agent could take any of some set of actions – three are shown in the diagram—based on its policy pi. From each of these, the environment could respond with one of several next states, s’ (two are shown in the ﬁgure), along with a reward, r, depending on its dynamics given by the function p.</p>
-</blockquote>
+
 <img src="/blog/2020/06/22/rl-policy-valuefunct/grid.png" class="" title="Example of finite MDP">
 
 
-<h3 id="Using-Bellman-equation-and-computing-v"><a href="#Using-Bellman-equation-and-computing-v" class="headerlink" title="Using Bellman equation and computing v"></a>Using Bellman equation and computing v</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/computingV1.png" class="" title="Simple case: only one future state for each action">
+<h3 id="Using-Bellman-equation-and-computing-v"><a href="#Using-Bellman-equation-and-computing-v" class="headerlink" title="Using Bellman equation and computing $v$"></a>Using Bellman equation and computing $v$</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/computingV1.png" class="" title="Simple case: only one future state for each action">
 <img src="/blog/2020/06/22/rl-policy-valuefunct/computingV2.png" class="" title="Now solve linear equations">
+
+<p><a href="https://github.com/LyWangPX/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions" target="_blank" rel="noopener">Excercises Answers</a></p>
+<h2 id="3-Optimality"><a href="#3-Optimality" class="headerlink" title="3. Optimality"></a>3. Optimality</h2><p>There is always at least one policy that is better than or equal to all other policies. This is an optimal policy. Although there may be more than one, we denote all the optimal policies by $\pi *$.</p>
+<h3 id="Optimal-state-value-function-v"><a href="#Optimal-state-value-function-v" class="headerlink" title="Optimal state value function ($v_*$)"></a>Optimal state value function ($v_*$)</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/optimalv.png" class="">
+
+
+<h3 id="Optimal-action-value-function-q"><a href="#Optimal-action-value-function-q" class="headerlink" title="Optimal action value function ($q_*$)"></a>Optimal action value function ($q_*$)</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/optimalq.png" class="">
+<img src="/blog/2020/06/22/rl-policy-valuefunct/optimal_graphical.png" class="">
+
+<h3 id="Optimal-policy"><a href="#Optimal-policy" class="headerlink" title="Optimal policy"></a>Optimal policy</h3><img src="/blog/2020/06/22/rl-policy-valuefunct/optimalpolicy.png" class="">
 
 
       
@@ -586,7 +599,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/">
+    <link itemprop="mainEntityOfPage" href="http://xiaoxiang-ma.github.io/blog/2020/05/23/helloworld/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -600,7 +613,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/2020/05/23/%E5%A4%A7%E5%AD%A6%E5%B9%B4%E4%B8%89/" class="post-title-link" itemprop="url">hello world</a>
+            <a href="/blog/2020/05/23/helloworld/" class="post-title-link" itemprop="url">hello world</a>
         </h2>
 
         <div class="post-meta">
@@ -744,6 +757,17 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaoxiang-ma" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xiaoxiang-ma" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xm53@cornell.edu" title="Email → mailto:xm53@cornell.edu" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://medium.com/@xiaoxiangma" title="Medium → https:&#x2F;&#x2F;medium.com&#x2F;@xiaoxiangma" rel="noopener" target="_blank"><i class="fab fa-medium fa-fw"></i>Medium</a>
+      </span>
+  </div>
 
 
 
@@ -843,6 +867,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
