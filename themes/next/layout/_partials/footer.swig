@@ -58,4 +58,5 @@
   </div>
 {%- endif %}
 
+<a class="author" href="https://xiaoxiang-ma.github.io">Return to main page</a>
 {{- next_inject('footer') }}
