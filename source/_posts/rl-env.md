@@ -25,16 +25,23 @@ class healtius_env(object):
         self.symptomsQuestions = symptomsQuestions
         self.diseases = diseases
 
-        self.possibleActions = list(symptomsQuestions.keys()) + diseases
-        self.symptomState = np.zeros(len(symptomsQuestions.keys()))
+        self.possibleActions = list(self.symptomsQuestions.keys()) + diseases
+        self.symptomState = np.zeros(len(self.symptomsQuestions.keys()))
         self.takenActions = []
-    def reset(self):
-        pass
 
+    def reset(self):
+        """
+        Resets the state of the environment and returns an initial observation.
+        Returns:
+            observation (object): the initial observation.
+        """
+        self.symptomState = np.zeros(len(self.symptomsQuestions.keys()))
+        return self.symptomState
     
     
     def step(self, action):
-        """Run one timestep of the environment's dynamics. When end of
+        """
+        Run one timestep of the environment's dynamics. When end of
         episode is reached, you are responsible for calling `reset()`
         to reset this environment's state.
         Accepts an action and returns a tuple (observation, reward, done, info).
@@ -77,8 +84,5 @@ class healtius_env(object):
         answer = input(self.symptomsQuestions[action])
         return answer
 
-    def changeState(self, action, answer):
-        index = list(self.symptomsQuestions.keys()).index(action)
-        self.symptomState[index] = answer
 
 ````
