@@ -1,5 +1,5 @@
 ---
 layout: tagcloud
-title: All tags
+title: 
 type: "tags"
 ---

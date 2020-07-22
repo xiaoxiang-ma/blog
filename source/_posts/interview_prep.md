@@ -1,7 +1,11 @@
 ---
 title: Interview Prep
 date: 2020-07-13 22:00:31
-tags:
+tags: 
+- 笔记
+- SQL
+categories: Data Science
+
 ---
 
 # SQL
@@ -130,4 +134,7 @@ END
 
 # Behavioural
 
-# Opportunities
+# Resources
+
+<!-- SQL: https://mode.com/sql-tutorial/intro-to-advanced-sql/ -->
+
