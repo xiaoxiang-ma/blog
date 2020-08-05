@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon.ico">
+  <link rel="mask-icon" href="/blog/images/favicon.ico" color="#222">
 
 <link rel="stylesheet" href="/blog/css/main.css">
 
@@ -23,7 +23,7 @@
 
   <meta name="description" content="Designs an agent that tries to maximize “reward” by trial and error.Not supervised, but not unsupervised either.  Textbook PDF  The k-armed Bandit ProblemFaced repeatedly with a choice among k diffe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bandit problem">
+<meta property="og:title" content="Bandit Problem">
 <meta property="og:url" content="http://xiaoxiang-ma.github.io/blog/2020/06/13/rl-bandit/index.html">
 <meta property="og:site_name" content="(▀̿Ĺ̯▀̿ ̿)">
 <meta property="og:description" content="Designs an agent that tries to maximize “reward” by trial and error.Not supervised, but not unsupervised either.  Textbook PDF  The k-armed Bandit ProblemFaced repeatedly with a choice among k diffe">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/13/rl-bandit/6.png">
 <meta property="og:image" content="http://xiaoxiang-ma.github.io/blog/2020/06/13/rl-bandit/8.png">
 <meta property="article:published_time" content="2020-06-14T02:06:45.000Z">
-<meta property="article:modified_time" content="2020-06-24T02:19:31.623Z">
+<meta property="article:modified_time" content="2020-08-05T15:02:51.622Z">
 <meta property="article:author" content="Xiaoxiang Ma">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="RL">
@@ -56,7 +56,7 @@
   };
 </script>
 
-  <title>Bandit problem | (▀̿Ĺ̯▀̿ ̿)</title>
+  <title>Bandit Problem | (▀̿Ĺ̯▀̿ ̿)</title>
   
 
 
@@ -131,17 +131,17 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a>
 
   </li>
   </ul>
@@ -185,7 +185,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Bandit problem
+          Bandit Problem
         </h1>
 
         <div class="post-meta">
@@ -232,6 +232,8 @@
 <a href="/blog/2020/06/13/rl-bandit/RL.pdf" title="Textbook PDF">Textbook PDF</a>
 
 <h2 id="The-k-armed-Bandit-Problem"><a href="#The-k-armed-Bandit-Problem" class="headerlink" title="The k-armed Bandit Problem"></a>The k-armed Bandit Problem</h2><p>Faced repeatedly with a choice among k different options. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. The objective is to maximize the expected total reward over some time period, for example, over 1000 action selections, or time steps.</p>
+<a id="more"></a>
+
 <!-- ![True value of action](1equation.png) -->
 <img src="/blog/2020/06/13/rl-bandit/1equation.png" class="" title="True value of action">
 
@@ -303,9 +305,10 @@
     
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/blog/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/blog/tags/RL/" rel="tag"># RL</a>
+              <a href="/blog/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+              <a href="/blog/tags/RL/" rel="tag"><i class="fa fa-tag"></i> RL</a>
           </div>
 
         
@@ -314,12 +317,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/" rel="prev" title="杨绛语录">
-      <i class="fa fa-chevron-left"></i> 杨绛语录
+    <a href="/blog/2020/06/18/rl-mdp/" rel="prev" title="Finite Markov Decision Processes & Rewards">
+      <i class="fa fa-chevron-left"></i> Finite Markov Decision Processes & Rewards
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2020/06/18/rl-mdp/" rel="next" title="Finite Markov Decision Processes & Rewards">
-      Finite Markov Decision Processes & Rewards <i class="fa fa-chevron-right"></i>
+    <a href="/blog/2020/05/27/%E6%9D%A8%E7%BB%9B%E8%AF%AD%E5%BD%95/" rel="next" title="杨绛语录">
+      杨绛语录 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -406,7 +409,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

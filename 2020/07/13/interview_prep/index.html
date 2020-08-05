@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon.ico">
+  <link rel="mask-icon" href="/blog/images/favicon.ico" color="#222">
 
 <link rel="stylesheet" href="/blog/css/main.css">
 
@@ -21,15 +21,15 @@
     var CONFIG = {"hostname":"xiaoxiang-ma.github.io","root":"/blog/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="SQLBasics123456789101112SELECT a,        b AS &quot;field b&quot;,        c AS field_b,        (c + d)&#x2F;2 AS c_d_avg -- Can do arithmetic operations    FROM tablename    WHERE g &#x3D; 1          AND h NOT IN (2,3,4)">
+  <meta name="description" content="A updating collection of notes&#x2F;resources for interview prep:  SQL Programming Stats Behavioural">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Interview Prep">
 <meta property="og:url" content="http://xiaoxiang-ma.github.io/blog/2020/07/13/interview_prep/index.html">
 <meta property="og:site_name" content="(▀̿Ĺ̯▀̿ ̿)">
-<meta property="og:description" content="SQLBasics123456789101112SELECT a,        b AS &quot;field b&quot;,        c AS field_b,        (c + d)&#x2F;2 AS c_d_avg -- Can do arithmetic operations    FROM tablename    WHERE g &#x3D; 1          AND h NOT IN (2,3,4)">
+<meta property="og:description" content="A updating collection of notes&#x2F;resources for interview prep:  SQL Programming Stats Behavioural">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-14T02:00:31.000Z">
-<meta property="article:modified_time" content="2020-07-20T19:57:21.098Z">
+<meta property="article:modified_time" content="2020-08-05T15:01:26.160Z">
 <meta property="article:author" content="Xiaoxiang Ma">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="SQL">
@@ -123,17 +123,17 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a>
 
   </li>
   </ul>
@@ -217,7 +217,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a,</span><br><span class="line">        b <span class="keyword">AS</span> <span class="string">"field b"</span>,</span><br><span class="line">        c <span class="keyword">AS</span> field_b,</span><br><span class="line">        (c + d)/<span class="number">2</span> <span class="keyword">AS</span> c_d_avg <span class="comment">-- Can do arithmetic operations</span></span><br><span class="line">    <span class="keyword">FROM</span> tablename</span><br><span class="line">    <span class="keyword">WHERE</span> g = <span class="number">1</span>  </span><br><span class="line">        <span class="keyword">AND</span> h <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">        <span class="keyword">AND</span> i <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line">        <span class="keyword">AND</span> (a <span class="keyword">ILIKE</span> <span class="string">'%caseinsensitive%'</span> <span class="keyword">OR</span> <span class="string">"b"</span> <span class="keyword">LIKE</span> <span class="string">'%CaseSensitive%'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">LIMIT</span> <span class="number">100</span> <span class="comment">-- Limits how many results</span></span><br><span class="line">    <span class="keyword">OFFSET</span> <span class="number">1</span> <span class="comment">-- Skip the first x results</span></span><br></pre></td></tr></table></figure>
+        <p>A updating collection of notes/resources for interview prep:</p>
+<ul>
+<li>SQL</li>
+<li>Programming</li>
+<li>Stats</li>
+<li>Behavioural<a id="more"></a>
+
+</li>
+</ul>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a,</span><br><span class="line">        b <span class="keyword">AS</span> <span class="string">"field b"</span>,</span><br><span class="line">        c <span class="keyword">AS</span> field_b,</span><br><span class="line">        (c + d)/<span class="number">2</span> <span class="keyword">AS</span> c_d_avg <span class="comment">-- Can do arithmetic operations</span></span><br><span class="line">    <span class="keyword">FROM</span> tablename</span><br><span class="line">    <span class="keyword">WHERE</span> g = <span class="number">1</span>  </span><br><span class="line">        <span class="keyword">AND</span> h <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">        <span class="keyword">AND</span> i <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line">        <span class="keyword">AND</span> (a <span class="keyword">ILIKE</span> <span class="string">'%caseinsensitive%'</span> <span class="keyword">OR</span> <span class="string">"b"</span> <span class="keyword">LIKE</span> <span class="string">'%CaseSensitive%'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">LIMIT</span> <span class="number">100</span> <span class="comment">-- Limits how many results</span></span><br><span class="line">    <span class="keyword">OFFSET</span> <span class="number">1</span> <span class="comment">-- Skip the first x results</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Logical-operators"><a href="#Logical-operators" class="headerlink" title="Logical operators"></a>Logical operators</h3><p><code>LIKE</code></p>
 <ul>
@@ -292,9 +301,10 @@
     
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/blog/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/blog/tags/SQL/" rel="tag"># SQL</a>
+              <a href="/blog/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+              <a href="/blog/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
           </div>
 
         
@@ -303,12 +313,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2020/07/09/rl-env/" rel="prev" title="RL environment setup">
-      <i class="fa fa-chevron-left"></i> RL environment setup
+    <a href="/blog/2020/07/20/online-resources/" rel="prev" title="Data Science Resources">
+      <i class="fa fa-chevron-left"></i> Data Science Resources
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2020/07/20/online-resources/" rel="next" title="Data Science Resources">
-      Data Science Resources <i class="fa fa-chevron-right"></i>
+    <a href="/blog/2020/07/09/rl-env/" rel="next" title="RL Environment Setup">
+      RL Environment Setup <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -395,7 +405,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
