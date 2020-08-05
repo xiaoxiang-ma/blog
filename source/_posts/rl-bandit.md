@@ -19,6 +19,7 @@ Not supervised, but not unsupervised either.
 
 Faced repeatedly with a choice among k different options. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. The objective is to maximize the expected total reward over some time period, for example, over 1000 action selections, or time steps.
 
+<!-- more -->
 
 <!-- ![True value of action](1equation.png) -->
 {% asset_img "1equation.png" "True value of action" %}

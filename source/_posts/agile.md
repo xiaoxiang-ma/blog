@@ -9,8 +9,6 @@ categories: Startup
 ---
 
 I have worked remotely as a data science intern for a prospering startup for just over two months. During this time, I was exposed to a fascinating product management system called Agile. Hence, I want to note some things down in case they are relevant in the future. 
-<!-- For the sake of confidentiality, I will refer to the startup as "startup-Y". -->
-
 ### What is Agile?
 
 In early 2001, in Snowbird, Utah, 17 people met to discuss the future of software development. The group’s members shared a frustration about the current state of affairs. The problem, they agreed, was that companies were so focused on excessively planning and documenting their software development cycles that they lost sight of what really mattered—pleasing their customers.
@@ -18,6 +16,7 @@ In early 2001, in Snowbird, Utah, 17 people met to discuss the future of softwar
 Companies may have touted corporate values like “excellence” and “integrity,” but these values did little to guide people—especially software developers—toward a better way.
 
 The Agile Manifesto emerged from this extended weekend at just 68 words, and the short and sweet document went on to change software development forever. [[1]](https://www.atlassian.com/agile/manifesto)
+<!-- more -->
 
 #### The Agile Manifesto:
 

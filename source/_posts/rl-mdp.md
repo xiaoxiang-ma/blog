@@ -15,6 +15,7 @@ Thus MDPs involve delayed reward and the need to tradeoff immediate and delayed 
 {% asset_img mdp0.png cycle %}
 
 For a problem, as long as you can identify States, Actions, and Rewards. It can be framed using RL.
+<!-- more -->
 
 ## *dynamics* of MDP
 {% asset_img mdp1.png dynamics of the MDP %}

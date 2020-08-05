@@ -8,6 +8,13 @@ categories: Data Science
 
 ---
 
+A updating collection of notes/resources for interview prep:
+- SQL
+- Programming
+- Stats
+- Behavioural
+<!-- more -->
+
 # SQL
 
 ### Basics

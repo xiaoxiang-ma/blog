@@ -17,6 +17,7 @@ categories: Data Science
 [Data Science Central](https://www.datasciencecentral.com/)
 [Continued learning](https://github.com/justmarkham/DAT3/blob/master/resources.md)
 [Data sci guide](https://www.kaggle.com/getting-started/44915)
+<!-- more -->
 
 ### Data Science: Interview prep & practice problems
 [100 data sci interview Qs](https://www.datasciencecentral.com/profiles/blogs/100-data-science-interview-questions-and-answers)

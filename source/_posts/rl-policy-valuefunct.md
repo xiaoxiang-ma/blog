@@ -20,6 +20,8 @@ Formally, a policy is a mapping from states to probabilities of selecting each p
 
 ***Policy can depend only on the current state, and not other things like time or previous states.***
 
+<!-- more -->
+
 ## 2. Value functions
 Value functions estimate future returns under a specific policy.
 
